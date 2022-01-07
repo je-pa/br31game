@@ -2,11 +2,13 @@ package game.gamer;
 
 import game.Host;
 
-public class SYS  implements IGamer{
+import java.util.Random;
+
+public class SYS implements Gamer {
 
     @Override
-    public int answer(Host host) {
-        return 0;
+    public int answer(int currentNum, int GamerNumber) {
+        return 1;//(int)(Math.random()*3+1);
     }
 
     @Override
