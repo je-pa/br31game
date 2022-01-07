@@ -11,11 +11,11 @@ public class Game {
 
         Gamer jepa = new Jepa();
         Gamer KYS = new KYS();
-        Gamer SYS = new SYS();
+//        Gamer SYS = new SYS();
 
         host.receiveApplication(jepa);
         host.receiveApplication(KYS);
-        host.receiveApplication(SYS);
+//        host.receiveApplication(SYS);
 
         host.startGame();
     }

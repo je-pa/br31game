@@ -8,7 +8,7 @@ public class SYS implements Gamer {
 
     @Override
     public int answer(int currentNum, int GamerNumber) {
-        return 1;//(int)(Math.random()*3+1);
+        return (int)(Math.random()*3+1);
     }
 
     @Override
