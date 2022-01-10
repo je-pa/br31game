@@ -22,17 +22,23 @@ public class Host {
             sb.append("인원수가 부족합니다.");
         }else{
             sb.append("게임시작!").append('\n');
-            int turn = 0;
-            while(currentNum<31){
+            recordAnswers(n);//데이터 저장
+            printRecordAnswer();//과정 프린트
+        }
+        System.out.println(sb);
+    }
+
+    private void recordAnswers(int n){
+        int turn = 0;
+        while(currentNum<31){
 //                System.out.println(currentNum);
-                int answer = GamerList.get(turn%n).answer(currentNum,n);
-                recordAnswers.add(answer);//데이터 저장
-                currentNum+=answer;
-                turn++;
-            }
-            printRecordAnswer();
+            int answer = GamerList.get(turn%n).answer(currentNum,n);
+            recordAnswers.add(answer);
+            currentNum+=answer;
+            turn++;
         }
     }
+
     private void printRecordAnswer(){
         int currentNum = 0;
         for(int i = 0; i< recordAnswers.size() ; i++){
@@ -46,6 +52,5 @@ public class Host {
                 }
             }sb.append('\n');
         }
-        System.out.println(sb);
     }
 }
